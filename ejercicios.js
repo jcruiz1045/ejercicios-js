@@ -107,21 +107,7 @@ if ( n1 > n2 && n1 > n3) {
         alert("precio del helado sin ningún topping es de 50MXN")
     }*/
 /*ejercicio 10*/
-    /*costos_Mensuales = {
-        "course": 4999,
-        "carrera": 3999,
-        "master": 2999,
-    }
-    Duracion = {
-        "course": 2,
-        "carrera": 6,
-        "master": 12,
-    }
-    descuento = {
-        "facebook": 0.20,
-        "google": 0.15,
-        "jesua": 0.50,
-    }*/
+   
     /*
     let costos_Mensuales = prompt("escoja un programa")
     
@@ -156,19 +142,30 @@ if ( n1 > n2 && n1 > n3) {
         } else {
             alert("No tiene descuento");
         }*/
-/*
-nivel = prompt("Escoja uno de los niveles");
-descuento = prompt("tiene alguna beca")
-    if (nivel === "course") {
-        alert("$4999 MXN")
-        
-    }
-    /*
-    else if (nivel + descuento === "course") {
-        alert($4999 * 0.20 = MXN)
-    }
-     else if(nivel === "carrera") {
-        alert("$3999 MXN")
-    } else if(nivel === "caster") {
-        alert("$2999 MXN")
-    }*/
+
+    /*Ejercicio 11*/
+    let vehiculo = prompt("En que veiculo se transporto (coche, moto, autobus):");
+    let kilometros_recorridos = parseFloat(prompt("Ingrasa los kilometros recorridos:"));
+    let litros_consumidos = parseFloat(prompt("Cuantos litros se consumieron:"));
+
+    let precio_kilometro;
+
+        if (vehiculo === "coche") {
+            precio_kilometro = 0.20;
+        } else if (vehiculo === "moto") {
+            precio_kilometro = 0.10;
+        } else if (vehiculo === "autobus") {
+            precio_kilometro = 0.5;
+        } else {
+            console.log("Error tipo de vehiculo no valido");
+            /*return;*/
+        }
+        let costo_total = precio_kilometro * kilometros_recorridos;
+
+        if (litros_consumidos <= 100) {
+            costo_total += 5;
+        } else {
+            costo_total +=  10;
+        }
+        console.log("el valor total a pagar es:", costo_total)
+       
