@@ -144,7 +144,8 @@ if ( n1 > n2 && n1 > n3) {
         }*/
 
     /*Ejercicio 11*/
-    let vehiculo = prompt("En que veiculo se transporto (coche, moto, autobus):");
+
+    /*let vehiculo = prompt("En que veiculo se transporto (coche, moto, autobus):");
     let kilometros_recorridos = parseFloat(prompt("Ingrasa los kilometros recorridos:"));
     let litros_consumidos = parseFloat(prompt("Cuantos litros se consumieron:"));
 
@@ -158,7 +159,7 @@ if ( n1 > n2 && n1 > n3) {
             precio_kilometro = 0.5;
         } else {
             console.log("Error tipo de vehiculo no valido");
-            /*return;*/
+            
         }
         let costo_total = precio_kilometro * kilometros_recorridos;
 
@@ -167,5 +168,47 @@ if ( n1 > n2 && n1 > n3) {
         } else {
             costo_total +=  10;
         }
-        console.log("el valor total a pagar es:", costo_total)
+        console.log("el valor total a pagar es:", costo_total)*/
+       /*ejercicio de prueba*/
+
+       let programas = prompt("escoja uno de los programas(course, carrera, master):");
+       let duracion;
        
+
+       if (programas === "course") {
+           duracion = 2;
+       } else if (programas === "carrera") {
+        duracion = 6;
+       } else if (programas === "master") {
+        duracion = 12;
+       } else {
+        alert("Error programa no valido")
+       }
+       let costo_mensual;
+        if (programas === "Course") {
+            costo_mensual = 4999;
+       } else if (programas === "Carrera") {
+            costo_mensual = 3999;
+       } else if (programas === "Master") {
+            costo_mensual = 2999;
+       }
+       let beca = prompt("¿Cuenta con alguna beca? (facebook, google, jeusa)");
+       let descuento;
+       switch (beca) {
+         case "Facebook":
+             descuento = 0.20;
+             break;
+         case "Google":
+             descuento = 0.15;
+             break;
+         case "Jesua":
+             descuento = 0.50;
+             break;
+         default:
+            descuento = 0;
+            break;
+       }
+       let costo_mensual_descuento = costo_mensual - (costo_mensual * descuento);
+       let costo_total = costo_mensual_descuento * duracion;
+        console.log("El valor mensula con descuento es: $" + costo_mensual_descuento + "MXN");
+        alert("El costo total del curso es: $" + costo_total + "MXN");
